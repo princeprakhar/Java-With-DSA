@@ -1,2 +1,2 @@
 # Project_using_java
-Java project
+Core Java with Data Structure And some standard Algorithm. 
