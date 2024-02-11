@@ -72,10 +72,8 @@ public class karatsubaMatrixMultiplication  {
     }
     public static void main(String []args)
     {
-//        BigInteger s1= new BigInteger("234");
-//        BigInteger s2= new BigInteger("256753");
-//        System.out.println(Karatsuba_multiplication("67","4"));
-        Calendar c = Calendar.getInstance();
-        System.out.println("The Current Date is:" + c.getTime());
+       BigInteger s1= new BigInteger("234");
+       BigInteger s2= new BigInteger("256753");
+       System.out.println(Karatsuba_multiplication("67","4"));
     }
 }
