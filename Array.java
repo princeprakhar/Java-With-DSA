@@ -1,4 +1,3 @@
-package Dsa_by_coding_ninjas;
 import java.math.BigInteger;
 import java.util.Scanner;
 import java.util.ArrayList;

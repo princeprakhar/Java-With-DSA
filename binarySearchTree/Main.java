@@ -1,5 +1,5 @@
 // import static org.junit.jupiter.api.Assertions.assertEquals;
-package Java-With-DSA.binarySearchTree;
+package binarySearchTree;
 // import org.junit.jupiter.api.Test;
 class Node{
 
