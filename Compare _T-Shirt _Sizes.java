@@ -26,7 +26,7 @@ XXL = XXL
 XXXXXS < M
 XL > XXXS
 Input
-The first line of the input contains a single integer t (1?t?104) — the number of test cases.
+The first line of the input contains a single integer t (1?t?104) ï¿½ the number of test cases.
 
 Each test case consists of one line, in which a and b T-shirt sizes are written. The lengths of the strings corresponding to the T-shirt sizes do not exceed 50. It is guaranteed that all sizes are correct.
 
@@ -53,17 +53,17 @@ outputCopy
 import java.util.*;
 class Main
 {
-    public static Scanner sc= new Scannner(System.in);
+    public static Scanner sc= new Scanner(System.in);
 	public static void main(String[] args) {
 	    int t=sc.nextInt();
-	    for(int i=0;i<n;i++)
+	    for(int i=0;i<t;i++)
 	    {
 	        String a,b;
 	        a=sc.next();
 	        b=sc.next();
 	        int n=a.length();
 	        int n1=b.length();
-	        if(a.charAt(n-1).equals(b.charAt(n1-1)&& a.charAt(0).~equals("S"))
+	        if(a.charAt(n-1)==(b.charAt(n1-1)) && a.charAt(0)==('S'))
 	        {
 			if(n==n1)
 				System.out.println("=");
@@ -76,19 +76,19 @@ class Main
 				System.out.println("<");
 			}
 		   }
-		   else if(a.charAt(n-1).equals("L"))
+		   else if(a.charAt(n-1)==('L'))
 	        {
 			System.out.println(">");
 	        }
-		   else if(b.charAt(n-1).equals("L"))
+		   else if(b.charAt(n-1) == ('L'))
 	        {
 			System.out.println("<");
 	        }
-		   else if(a.charAt(n-1).equals("M")&&b.charAt(n-1).equals("S"))
+		   else if(a.charAt(n-1)==('M') && b.charAt(n-1)==('S'))
 	        {
 			System.out.println(">");
 	        }
-	         else if(a.charAt(n-1).equals("M")&&b.charAt(n-1).equals("S"))
+	         else if(a.charAt(n-1)==('M')&&b.charAt(n-1) == ('S'))
 	        {
 			System.out.println(">");
 	        }

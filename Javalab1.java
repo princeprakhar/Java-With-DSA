@@ -1,4 +1,4 @@
-public class javalab1
+public class Javalab1
 {
     static int a=1;
     public static int fb(int n)

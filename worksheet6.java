@@ -1,10 +1,10 @@
 import java.util.*;
-interface student
+interface students
 {
 	void display_Grade();
 	void display_attend();
 }
-class PG_student implements student
+class PG_student implements students
 {
 	String name,grade;
 	int m1,m2,m3,attendance,total;
@@ -74,7 +74,7 @@ public void display_Grade()
 	System.out.print("The grade is: "+grade);
 }
 }	
-class Main
+class main6
 {
 	public static void main(String []args)
 	{
@@ -90,11 +90,11 @@ class Main
 		{
 			System.out.println("Exception: "+ex.getMessage());
 		}	
-		PG_student s1=new PG_student("Prakhar deep",a[0],a[1],a[2],100);
+		pgStudent s1=new pgStudent("Prakhar deep",a[0],a[1],a[2],100);
 		s1.display();
 		s1.display_attend();
 		s1.display_Grade();
-		UG_student s2=new UG_student("Prince",99,100,99,100);
+		ugStudent s2=new ugStudent("Prince",99,100,99,100);
 		System.out.println();
 		s2.display();
 		s2.display_attend();

@@ -1,4 +1,4 @@
-package Dsa_by_coding_ninjas.graph;
+package graph;
 
 class Pair<A, B> {
     private final A first;

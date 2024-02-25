@@ -106,14 +106,14 @@ public class Sort {
         {
             a[i]=sc.nextInt();
         }
-        System.out.println("Unsorted Array: ");
+        System.out.println("Unsorted array.Array: ");
        for(int i:a)
        {
            System.out.print(i+" ");
        }
        System.out.println();
        quickSort(a,0,n-1,2);
-        System.out.println("Sorted Array: ");
+        System.out.println("Sorted array.Array: ");
         for(int i:a)
         {
             System.out.print(i+" ");

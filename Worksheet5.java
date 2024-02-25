@@ -4,11 +4,11 @@ interface student
 	void display_Grade();
 	void display_attend();
 }
-class PG_student implements student
+class pgStudent implements student
 {
 	String name,grade;
 	int m1,m2,m3,attendance,total;
-	PG_student(String name,int m1,int m2 ,int m3,int attendance)
+	pgStudent(String name, int m1, int m2 , int m3, int attendance)
 	{	
 	this.name=name;
 	this.m1=m1;
@@ -39,11 +39,11 @@ class PG_student implements student
 		System.out.print("The grade is: "+grade);
 	}
 }
-class UG_student implements student
+class ugStudent implements student
 {
 	String name,grade;
 	int m1,m2,m3,attendance,total;
-	UG_student(String name,int m1,int m2 ,int m3,int attendance)
+	ugStudent(String name, int m1, int m2 , int m3, int attendance)
 {	
 	this.name=name;
 	this.m1=m1;
@@ -74,7 +74,7 @@ public void display_Grade()
 	System.out.print("The grade is: "+grade);
 }
 }	
-class Main
+class main5
 {
 	public static void main(String []args)
 	{
@@ -90,11 +90,11 @@ class Main
 		{
 			System.out.println("Exception: "+e.getMessage());
 		}	
-		PG_student s1=new PG_student("Prakhar deep",a[0],a[1],a[2],100);
+		pgStudent s1=new pgStudent("Prakhar deep",a[0],a[1],a[2],100);
 		s1.display();
 		s1.display_attend();
 		s1.display_Grade();
-		UG_student s2=new UG_student("Prince",99,100,99,100);
+		ugStudent s2=new ugStudent("Prince",99,100,99,100);
 		s2.display();
 		s2.display_attend();
 		s2.display_Grade();

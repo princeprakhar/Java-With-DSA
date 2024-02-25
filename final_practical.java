@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class Main
+class main
 {
 	public static int fab_r(int n)
 	{
@@ -40,5 +40,9 @@ class Main
 		n=sc.nextInt();
 		System.out.println("Nth term using recussive method: "+fab_r(n));
 		System.out.println("Nth term using non-recussive method: "+fab_nr(n));
+	}
+
+	public void sq(int i) {
+
 	}
 }

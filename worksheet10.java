@@ -73,7 +73,7 @@ class Registration extends JFrame
 	add(b2);
   }
 }
-class Main
+class Main0
 {
 	public static void main(String args[])
 	{

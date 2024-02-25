@@ -97,7 +97,7 @@ public class Main {
 
         printGraph(root, "", true);
 
-        System.out.println(findHeight(root));
+        System.out.println("Height of Tree is : "+findHeight(root));
     }
     // @Test
     // void addition() {

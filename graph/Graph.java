@@ -1,15 +1,14 @@
-package Dsa_by_coding_ninjas.graph;
-
-
+package graph;
 import java.util.ArrayList;
 import java.util.Scanner;
-public class Graph {
+
+public class Graph  {
     public static void main(String []args)
     {
         Scanner sc=new Scanner(System.in);
         int n =sc.nextInt();
         int m =sc.nextInt();
-        ArrayList<ArrayList<Pair<Integer,Integer>>> g=new ArrayList<ArrayList<Pair<Integer,Integer>>>(m+1);
+        ArrayList<ArrayList<Pair<Integer,Integer>>> g= new ArrayList<>(m+1);
         System.out.println("Enter yes if directed else no");
         String s=sc.next();
         for(int i=1;i<=m;i++)

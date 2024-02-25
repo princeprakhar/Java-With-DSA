@@ -40,12 +40,12 @@ public class MergeSort {
     public static void main(String []args){
         int a[]={2,3,5,7,2,33,6,3,1,6,28};
 
-        System.out.println("Unsorted Array: ");
+        System.out.println("Unsorted array.Array: ");
         for(int i=0;i<10;i++){
             System.out.print(a[i]+" ");
         }
         mergeSort(a,0,9);
-        System.out.println("\nSorted Array: ");
+        System.out.println("\nSorted array.Array: ");
         for(int i=0;i<10;i++){
             System.out.print(a[i]+" ");
         }
