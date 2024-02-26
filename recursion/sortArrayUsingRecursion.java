@@ -27,13 +27,14 @@ public class sortArrayUsingRecursion {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int[] n = new int[1];
+        System.out.println("Enter the Array Size: ");
         n[0] = sc.nextInt();
         int[] a = new int[n[0]];
-        System.out.println("Enter the Array Elements");
+        System.out.println("Enter the Array Elements: ");
         for(int i=0;i<n[0];i++){
             a[i]=sc.nextInt();
         }
-        System.out.println("The Sorted array is");
+        System.out.println("Sorted array: ");
         sort(a, n[0]);
         for (int i : a) {
             System.out.println(i);
