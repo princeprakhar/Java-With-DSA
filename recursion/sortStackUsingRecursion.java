@@ -20,8 +20,12 @@ public class sortStackUsingRecursion {
             int x=sc.nextInt();
             st.push(x);
         }
-        sortStack(st);
-        System.out.println("Sorted stack is as follow: ");
+//        sortStack(st); //call sort function to sort the stack.
+//        System.out.println("Sorted stack is as follow: ");
+        int k= n%2==0 ? n/2-1:n/2;
+        deleteMiddle(st,k);
+        System.out.println("stack after the deletion of middle element");
+        reverseStack(st);
         printStack(st);
 
     }
@@ -46,6 +50,31 @@ public class sortStackUsingRecursion {
         int val = st.pop();
         insertElement(st,temp);
         st.push(val);
+    }
+
+
+    //creating a deleteMiddle method which will delete element from the stack.
+    public static void deleteMiddle(Stack<Integer> s, int k)
+    {
+        if (k == 0)
+        {
+            s.pop();
+            return ;
+        }
+        int temp = s.pop();
+        deleteMiddle(s, k-1);
+        s.push(temp);
+    }
+    //creatingn a method which reverse a stack.
+    public static void reverseStack(Stack<Integer>s)
+    {
+        if(s.size()==0)
+        {
+            return ;
+        }
+        int temp=s.pop();
+        reverseStack(s);
+        s.push(temp);
     }
     //creating a printStack method which will print the item in stack
     static void printStack(Stack<Integer> s)
