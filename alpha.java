@@ -1,4 +1,3 @@
-package alpha_pvt;
 public class alpha
 {
    public String s="Hello, CEO!";
