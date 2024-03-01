@@ -35,20 +35,14 @@ public class DisjointSetUnion {
 
         if(a!=b)
         {
-            if(a>b)
-                swap(a,b);
+            if(a>b) {
+                a=a+b;
+                b=a-b;
+                a=a-b;
+            }
             parent[b]= a;
             size[a] += size[b];
         }
-    }
-
-    /* defining a swap method which will use to swap two numbers */
-    public static void swap(int a, int b)
-    {
-        a=a+b;
-        b=a-b;
-        a=a-b;
-        return ;
     }
     public static void main(String []args)
     {

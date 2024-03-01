@@ -1,5 +1,5 @@
-package example;
-import alpha_pvt.alpha;
+//package example;
+//import alpha_pvt.alpha;
 public class pack1
 {
    protected static String s = "Hello Prakhar!";

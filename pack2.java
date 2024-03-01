@@ -1,5 +1,5 @@
-package example;
-import example.pack1;
+//package example;
+
 class pack2
 {
   public static void main(String []args)
