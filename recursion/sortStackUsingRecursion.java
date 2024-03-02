@@ -74,8 +74,23 @@ public class sortStackUsingRecursion {
         }
         int temp=s.pop();
         reverseStack(s);
-        s.push(temp);
+        insertElementForReverse(s, temp);
+//        s.push(temp);
     }
+
+    //creating a inertElementForReverse method which will take two argument stack s and element e.
+    private static void insertElementForReverse(Stack<Integer> s, int temp) {
+        if(s.isEmpty())
+        {
+            s.push(temp);
+            return;
+        }
+        int val = s.pop();
+        insertElementForReverse(s,temp);
+        s.push(val);
+        return;
+    }
+
     //creating a printStack method which will print the item in stack
     static void printStack(Stack<Integer> s)
     {
