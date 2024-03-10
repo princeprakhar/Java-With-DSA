@@ -4,9 +4,11 @@ import java.util.Scanner;
 
 public class BS {
     int a[];
+    int n;
     BS(int n)
     {
         this.a= new int[n];
+        this.n= n;
     }
     //defining the search elememt method which will the element int the arr  and if the current the element is
     //in the array then it should return the index for the value and if not then return -1.
@@ -46,7 +48,17 @@ public class BS {
 
 
     }
+    //order agnostic search
+    public int orderAgnosticSearch(int target)
+    {
+        if(this.n==1)
+        {
+            return 1;
+        }
+        else{
 
+        }
+    }
     private void takeInput(int n,Scanner sc) {
         System.out.println("Enter tyhe elemnt for the array:");
         for(int i=0;i<n;i++)
