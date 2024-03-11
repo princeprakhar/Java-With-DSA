@@ -51,13 +51,43 @@ public class BS {
     //order agnostic search
     public int orderAgnosticSearch(int target)
     {
-        if(this.n==1)
-        {
-            return 1;
-        }
-        else{
+        int l=0, r=this.n -1;
+        // Checking the sorted order in ascending or descending of the given array
+        boolean isAsc = a[l] < a[r];
+        while (l <= r) {
+            int middle = l + (r - l) / 2;
 
+            // Check if target is present at mid
+            if (a[middle] == target)
+                return middle;
+
+            // if Ascending order
+            if (isAsc == true) {
+
+                // If target greater, ignore left half
+                if (a[middle] < target)
+                    l = middle + 1;
+
+                    // If target smaller, ignore right half
+                else
+                    r = middle - 1;
+            }
+
+            // else Descending order
+            else {
+
+                // If target smaller, ignore left half
+                if (a[middle] > target)
+                    l = middle + 1;
+
+                    // If target greater, ignore right half
+                else
+                    r = middle - 1;
+            }
         }
+
+        // Element is not present
+        return -1;
     }
     private void takeInput(int n,Scanner sc) {
         System.out.println("Enter tyhe elemnt for the array:");
