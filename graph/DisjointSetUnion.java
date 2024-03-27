@@ -12,7 +12,7 @@ public class DisjointSetUnion {
     private static int N= (int) 1e5;
     private static int []parent= new int[N];
     private static int []size = new int[N];
-   /* creates a new set consisting of the new element v */
+    /* creates a new set consisting of the new element v */
     public static void makeSet(int v){
         parent[v] = v;
         size[v] = 1;
