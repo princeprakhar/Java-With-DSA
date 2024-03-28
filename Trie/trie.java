@@ -30,18 +30,21 @@ public class trie {
             {
                 return false;
             }
+            node = node.getNode(word.charAt(i));
         }
         return node.endOfWord;
     }
     //defining the stardWithWord method
     public boolean startWithWord(String word)
     {
+        Node node = root;
         for(int i=0;i<word.length();i++)
         {
-            if(!root.containsKey(word.charAt(i)))
+            if(!node.containsKey(word.charAt(i)))
             {
                 return false;
             }
+            node = node.getNode(word.charAt(i));
         }
         return true;
     }
