@@ -7,6 +7,8 @@ import java.util.Scanner;
 public class DFSForTree {
     private static int N = (int) 1e5 + 10;
     private static int[] par;
+    private static int [] subTreeSum;
+    private static int [] weight;
     private static int[] depth;
     private static boolean firstDFS;
     public static void dfsForTree(ArrayList<ArrayList<Integer>> graph, int v, int parent) {
@@ -16,6 +18,17 @@ public class DFSForTree {
             if (i != parent) {
                 depth[i] = 1 + depth[v];
                 dfsForTree(graph, i, v);
+            }
+        }
+    }
+    public static void sumTreeSumUsingDfs(ArrayList<ArrayList<Integer>> graph, int v, int parent) {
+
+        subTreeSum[v] += weight[v];
+        for (int i : graph.get(v)) {
+            if (i != parent) {
+
+                dfsForTree(graph, i, v);
+                subTreeSum[v] += subTreeSum[i];
             }
         }
     }
@@ -34,7 +47,8 @@ public class DFSForTree {
         ArrayList<ArrayList<Integer>> graph = new ArrayList<>();
         par = new int[n+1];
         depth = new int[n+1];
-
+        subTreeSum = new int [n+1];
+        weight =  new int [n+1];
         // Initialize graph
         for (int i = 1; i <= N; i++) {
             graph.add(new ArrayList<>());
@@ -47,7 +61,11 @@ public class DFSForTree {
             graph.get(u).add(v);
             graph.get(v).add(u);
         }
-
+        for(int i = 1; i <= n; i++) {
+            int val = sc.nextInt();
+            weight[i] = val;
+        }
+        /*
         // First DFS to find the farthest node from node 0
         dfsForTree(graph, 0, -1);
         int mxDep = -1;
@@ -91,5 +109,14 @@ public class DFSForTree {
 
         // Output the LCA
         System.out.println("LCA of " + a + " and " + b + " : " + lca);
+
+         */
+        subTreeSum[0] = 0;
+        sumTreeSumUsingDfs(graph, 1, 0);
+        for(int i=1; i<=n; i++) {
+
+            System.out.println("SubTree Sum  " + subTreeSum[i]) ;
+
+        }
     }
 }
