@@ -58,6 +58,7 @@ public class Graph {
         }
     }
 
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         final int N = (int) 1e5 + 10;
